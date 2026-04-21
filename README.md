@@ -87,7 +87,7 @@ Swagger en `http://localhost:5000/swagger`.
 ### 4. Levantar el frontend
 
 ```bash
-cd frontend/gestor-tareas-app
+cd frontend
 npm install
 npm run dev
 ```
