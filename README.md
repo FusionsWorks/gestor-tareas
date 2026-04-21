@@ -92,7 +92,7 @@ npm install
 npm run dev
 ```
 
-> Copiá `.env.example` y renombralo a `.env`. Verificá que el puerto coincida con el que levantó el backend en tu máquina.
+> Se debe de copiar `.env.example` y renombrarlo a `.env`. Verificar que el puerto coincida con el que levantó el backend en la máquina.
 
 La app queda disponible en `http://localhost:5173`.
 
