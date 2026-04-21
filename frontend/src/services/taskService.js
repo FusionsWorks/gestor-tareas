@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5204/api/tasks'
+const BASE_URL = `${import.meta.env.VITE_API_URL}/api/tasks`
 
 export async function getTasks(status = '') {
   const url = status ? `${BASE_URL}?status=${status}` : BASE_URL
