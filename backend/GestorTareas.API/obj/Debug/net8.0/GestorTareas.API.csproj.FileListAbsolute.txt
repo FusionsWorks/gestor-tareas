@@ -142,3 +142,4 @@ R:\Visual studio proyectos\Proyectos aparte\gestor-tareas\backend\GestorTareas.A
 R:\Visual studio proyectos\Proyectos aparte\gestor-tareas\backend\GestorTareas.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 R:\Visual studio proyectos\Proyectos aparte\gestor-tareas\backend\GestorTareas.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 R:\Visual studio proyectos\Proyectos aparte\gestor-tareas\backend\GestorTareas.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+R:\Visual studio proyectos\Proyectos aparte\gestor-tareas\backend\GestorTareas.API\obj\Debug\net8.0\GestorTareas.API.sourcelink.json
