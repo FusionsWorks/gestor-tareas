@@ -81,8 +81,8 @@ dotnet ef database update   # crea la BD y aplica migraciones
 dotnet run
 ```
 
-La API queda disponible en `http://localhost:5000`.  
-Swagger en `http://localhost:5000/swagger`.
+La API queda disponible en `http://localhost:5204`.  
+Swagger en `http://localhost:5204/swagger`.
 
 ### 4. Levantar el frontend
 
