@@ -1,9 +1,18 @@
 import { useState, useEffect } from 'react'
 
+// Estado vacío definido fuera del componente para reutilizarlo
+// al resetear el formulario sin crear un objeto nuevo cada vez.
+
 const EMPTY = { titulo: '', descripcion: '', estado: 'pendiente', userId: '' }
 
+// Formulario compartido para crear y editar tareas.
+// Si recibe editingTask, entra en modo edición y precarga los valores.
+// Si no, actúa como formulario de creación.
 export default function TaskForm({ onSubmit, editingTask, onCancel, users }) {
   const [form, setForm] = useState(EMPTY)
+
+  // Cuando cambia la tarea en edición, se sincronizan los campos del formulario.
+  // Si editingTask es null (se canceló o se guardó), se resetea a vacío.
 
   useEffect(() => {
     if (editingTask) {
@@ -18,11 +27,15 @@ export default function TaskForm({ onSubmit, editingTask, onCancel, users }) {
     }
   }, [editingTask])
 
+  // Manejador genérico — usa el atributo name del input para actualizar
+  // el campo correspondiente sin necesitar un handler por campo.
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
 
   const handleSubmit = e => {
     e.preventDefault()
+    // Validación mínima: título no vacío y usuario seleccionado.
     if (!form.titulo.trim() || !form.userId) return
+    // userId llega como string desde el select — se convierte a número.
     onSubmit({ ...form, userId: Number(form.userId) })
     setForm(EMPTY)
   }

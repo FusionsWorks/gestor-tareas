@@ -1,5 +1,10 @@
 import { useState } from 'react'
 
+// El estado de edición es local a cada card (useState interno).
+// Es puramente decisión de diseño: en lugar de levantar el estado al App y pasar
+// editingTask como prop, cada TaskCard es autónoma.
+// Ventaja: App.jsx queda más simple y cada card no interfiere con las demás.
+
 const ESTADO_CLASS = {
   'pendiente':   'badge badge-pendiente',
   'en-progreso': 'badge badge-progreso',
@@ -7,8 +12,10 @@ const ESTADO_CLASS = {
 }
 
 export default function TaskCard({ task, onEdit, onDelete, users }) {
+    // Controla si esta card específica está en modo edición
   const [editing, setEditing] = useState(false)
   const [form, setForm] = useState({
+     // Copia local del formulario — inicializada con los valores actuales de la tarea
     titulo:      task.titulo,
     descripcion: task.descripcion,
     estado:      task.estado,

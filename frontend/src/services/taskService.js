@@ -1,5 +1,9 @@
+// URL base leída desde variable de entorno para evitar hardcodear el puerto.
+// Se configura en el archivo .env del proyecto frontend.
 const BASE_URL = `${import.meta.env.VITE_API_URL}/api/tasks`
 
+// Obtiene todas las tareas. Si se pasa un estado, filtra por ese valor.
+// El filtrado lo hace la API (query param ?status=), no el frontend.
 export async function getTasks(status = '') {
   const url = status ? `${BASE_URL}?status=${status}` : BASE_URL
   const res = await fetch(url)
@@ -13,6 +17,7 @@ export async function getTaskById(id) {
   return res.json()
 }
 
+// Envía los datos como JSON en el body — la API espera un CreateTaskDto.
 export async function createTask(data) {
   const res = await fetch(BASE_URL, {
     method: 'POST',
@@ -36,4 +41,5 @@ export async function updateTask(id, data) {
 export async function deleteTask(id) {
   const res = await fetch(`${BASE_URL}/${id}`, { method: 'DELETE' })
   if (!res.ok) throw new Error('Error al eliminar tarea')
+  // DELETE no retorna body — no se llama res.json()
 }

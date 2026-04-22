@@ -1,3 +1,4 @@
+// URL base leída desde variable de entorno, igual que taskService.
 const BASE_URL = `${import.meta.env.VITE_API_URL}/api/users`
 
 export async function getUsers() {

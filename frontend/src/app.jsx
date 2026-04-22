@@ -5,6 +5,9 @@ import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 import UserForm from './components/UserForm'
 
+// Componente raíz de la aplicación.
+// "Orquesta" los hooks y pasa datos y callbacks a los componentes hijos.
+// No contiene lógica de negocio ni fetch — eso vive en los hooks (ver carpeta hooks).
 export default function App() {
   const { tasks, loading, error, filter, setFilter, addTask, editTask, removeTask } = useTasks()
   const { users, addUser } = useUsers()
