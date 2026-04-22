@@ -155,6 +155,16 @@ cd frontend
 npm test
 ```
 
+Se intentó implementar tests unitarios con xUnit, Moq y FluentAssertions
+para el `TaskService` en el backend. Por conflictos de versiones entre paquetes
+en el entorno de desarrollo, no se incluyeron en el entregable final.
+
+Los tests planificados cubrían:
+- `GetAllAsync` — verifica que retorna todas las tareas
+- `GetByIdAsync` — verifica retorno correcto e id inexistente (null)
+- `CreateAsync` — verifica que mapea correctamente el DTO
+- `DeleteAsync` — verifica true/false según si existe la tarea
+
 ---
 
 ## Herramientas de IA utilizadas
