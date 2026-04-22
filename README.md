@@ -33,7 +33,6 @@ gestor-tareas/
 │       ├── Data/            # AppDbContext (EF Core)
 │       └── Program.cs
 └── frontend/
-    └── gestor-tareas-app/
         └── src/
             ├── components/  # TaskList, TaskCard, TaskForm, TaskFilter, UserForm
             ├── hooks/       # useTasks, useUsers
