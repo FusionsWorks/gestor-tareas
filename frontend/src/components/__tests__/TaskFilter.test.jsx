@@ -2,6 +2,8 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { vi } from 'vitest'
 import TaskFilter from '../TaskFilter'
 
+// Testing para TaskFilter
+
 describe('TaskFilter', () => {
   test('renderiza los 4 botones de filtro', () => {
     render(<TaskFilter filter="" onChange={() => {}} />)
