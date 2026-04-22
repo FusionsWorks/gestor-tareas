@@ -142,15 +142,18 @@ Las tablas principales son:
 ---
 ## Testing
 
-Se intentó implementar tests unitarios con xUnit, Moq y FluentAssertions 
-para el `TaskService`. Por conflictos de versiones entre paquetes en el 
-entorno de desarrollo, no se incluyeron en el entregable final.
+Se implementaron tests unitarios para el frontend con **Vitest** y **React Testing Library**.
 
-Los tests planificados cubrían:
-- `GetAllAsync` — verifica que retorna todas las tareas
-- `GetByIdAsync` — verifica retorno correcto e id inexistente (null)
-- `CreateAsync` — verifica que mapea correctamente el DTO
-- `DeleteAsync` — verifica true/false según si existe la tarea
+Los tests cubren:
+- `TaskFilter` — renderizado de botones, callback onChange y clase active
+- `TaskList` — mensaje de lista vacía y renderizado de tareas
+- `UserForm` — submit con datos correctos y validación de campos vacíos
+
+Para correr los tests:
+```bash
+cd frontend
+npm test
+```
 
 ---
 
